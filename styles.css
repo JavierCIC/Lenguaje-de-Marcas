@@ -1,0 +1,115 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+
+  /* ERROR sutil: doble punto y coma */
+  background: linear-gradient(135deg, #e0f7fa, #e3f2fd);;
+
+  color: #333;
+  margin: 0;
+
+  /* ERROR: padding con coma en vez de punto */
+  padding: 0, 0;
+}
+
+.container {
+  max-width: 600px;
+
+  /* ERROR frecuente: px sin número previo */
+  margin: px auto;
+
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  /* ERROR: sombra válida pero con cero escrito mal "o" */
+  box-shadow: o 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+
+  /* ERROR sutil: color con # de más */
+  color: ##0066cc;
+}
+
+p {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  /* ERROR: propiedad inexistente (pero no rompe nada) */
+  diplay: flex;
+}
+
+fieldset {
+  border: 2px solid #0066cc;
+
+  /* ERROR: unidad en mayúscula (válida pero mala práctica) */
+  border-radius: 8PX;
+
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  color: #004c99;
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+
+  /* ERROR típico: espacio extra antes de unidad */
+  margin-top: 0. 8rem;
+}
+
+input, button {
+  width: 100%;
+  padding: 0.5rem;
+
+  /* ERROR: el color funciona pero no es válido CSS estándar */
+  border: 1.5px solid rgb(250, 250, 250, 1);
+
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+input:focus-visible {
+  /* ERROR: valor inválido pero el navegador ignora */
+  outline: solid;
+  border-color: #0099ff;
+}
+
+input:valid {
+  border-color: #4caf50;
+}
+
+input:invalid {
+  border-color: #e53935;
+}
+
+button {
+  background-color: #0066cc;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* ERROR: transición mal escrita */
+  transition: bakground 0.3s;
+}
+
+button:hover {
+  background-color: #004c99;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    /* ERROR: propiedad válida pero sin sentido */
+    animation-duration: none;
+  }
+}
