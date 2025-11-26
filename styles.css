@@ -1,35 +1,23 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-
-  /* ERROR sutil: doble punto y coma */
-  background: linear-gradient(135deg, #e0f7fa, #e3f2fd);;
-
+  background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
   color: #333;
   margin: 0;
-
-  /* ERROR: padding con coma en vez de punto */
-  padding: 0, 0;
+  padding: 0;
 }
 
 .container {
   max-width: 600px;
-
-  /* ERROR frecuente: px sin número previo */
-  margin: px auto;
-
+  margin: 2rem auto;
   background: #fff;
   padding: 2rem;
   border-radius: 1rem;
-
-  /* ERROR: sombra válida pero con cero escrito mal "o" */
-  box-shadow: o 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 h1 {
   text-align: center;
-
-  /* ERROR sutil: color con # de más */
-  color: ##0066cc;
+  color: #0066cc;
 }
 
 p {
@@ -40,17 +28,11 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
-  /* ERROR: propiedad inexistente (pero no rompe nada) */
-  diplay: flex;
 }
 
 fieldset {
   border: 2px solid #0066cc;
-
-  /* ERROR: unidad en mayúscula (válida pero mala práctica) */
-  border-radius: 8PX;
-
+  border-radius: 0.5rem;
   padding: 1rem;
 }
 
@@ -62,26 +44,20 @@ legend {
 
 label {
   display: block;
-
-  /* ERROR típico: espacio extra antes de unidad */
-  margin-top: 0. 8rem;
+  margin-top: 0.8rem;
 }
 
 input, button {
   width: 100%;
   padding: 0.5rem;
-
-  /* ERROR: el color funciona pero no es válido CSS estándar */
-  border: 1.5px solid rgb(250, 250, 250, 1);
-
+  border: 1.5px solid #ccc;
   border-radius: 0.4rem;
   font-size: 1rem;
   transition: 0.3s;
 }
 
 input:focus-visible {
-  /* ERROR: valor inválido pero el navegador ignora */
-  outline: solid;
+  outline: 2px solid #0099ff;
   border-color: #0099ff;
 }
 
@@ -98,9 +74,8 @@ button {
   color: white;
   font-weight: bold;
   cursor: pointer;
-
-  /* ERROR: transición mal escrita */
-  transition: bakground 0.3s;
+  border: none;
+  transition: background 0.3s;
 }
 
 button:hover {
@@ -109,7 +84,6 @@ button:hover {
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    /* ERROR: propiedad válida pero sin sentido */
-    animation-duration: none;
+    transition: none;
   }
 }

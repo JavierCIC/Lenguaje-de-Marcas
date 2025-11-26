@@ -4,12 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro al Evento TechFest 2025</title>
-
-  <!-- ERROR sutil: espacio accidental al final del nombre -->
-  <link rel="stylesheet" href="styles.css ">
-
-  <!-- ERROR sutil: meta duplicada con valor ligeramente distinto -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.02">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -17,51 +12,43 @@
     <h1>Registro al TechFest 2025</h1>
     <p>Rellena el formulario para acceder a la mayor Feria Tecnológica.</p>
 
-    <form action="#" method="post">
+    <form action="#" method="post" aria-label="Formulario de registro al evento">
 
       <fieldset>
         <legend>Datos personales</legend>
 
-        <!-- ERROR sutil: for coincide, pero hay un espacio oculto en el id -->
         <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre " name="nombre" required placeholder="Nombre">
+        <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
 
-        <!-- ERROR habitual: placeholder con espacio inicial -->
         <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required placeholder=" email">
+        <input type="email" id="email" name="email" required placeholder="email ">
 
-        <!-- ERROR: atributo min mal colocado (no hace nada aquí) -->
         <label for="fecha">Fecha de nacimiento:</label>
-        <input type="date" id="fecha" name="fecha" min required>
+        <input type="date" id="fecha" name="fecha" required>
       </fieldset>
 
       <fieldset>
         <legend>Preferencias del evento</legend>
 
-        <!-- ERROR: name duplicado por accidente -->
         <label for="color">Color de tu credencial:</label>
-        <input type="color" id="color" name="color" name="credencial_color" value="#0066cc">
+        <input type="color" id="color" name="color" value="#0066cc">
 
-        <!-- ERROR: atributo aria mal escrito -->
         <label for="nivel">Nivel de experiencia en tecnología:</label>
-        <input type="range" id="nivel" aria-lable="nivel" name="nivel" min="1" max="10" value="5">
+        <input type="range" id="nivel" name="nivel" min="1" max="10" value="5" aria-label="Nivel de experiencia (1 a 10)">
 
-        <!-- ERROR sutil: accept mal escrito -->
         <label for="foto">Sube tu foto (opcional):</label>
-        <input type="file" id="foto" name="foto" accepet="image/*">
+        <input type="file" id="foto" name="foto" accept="image/*">
       </fieldset>
 
       <fieldset>
         <legend>Confirmación</legend>
 
-        <!-- ERROR: el checkbox está bien, pero el label no está asociado -->
         <label>
-          <input type="checkbox" required>
+          <input type="checkbox" name="terminos" required>
           Acepto los términos y condiciones
         </label>
 
-        <!-- ERROR: falta type, pero button funciona igual -->
-        <button>Enviar registro</button>
+        <button type="submit">Enviar registro</button>
       </fieldset>
     </form>
   </main>
